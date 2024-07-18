@@ -1,0 +1,296 @@
+* {
+    
+    font-family: "Roboto", sans-serif;
+}
+
+#container {
+    width: 100%;
+    /* vh- (viewport height)heigt of screen - it will change according to mobile laptop 100vh means 100% of the screen*/
+    height: 100vh;
+    position: relative;
+    /* all the childs relative to this id and its positions */
+}
+
+#navbar {
+    /* to place child element in inline */
+    display: flex;
+    width: 85%;
+    margin-left: 100px;
+    /* to obtain space between contents horizontally in navbar */
+    justify-content: space-between;
+    /* 
+    to align items verttically centered */
+    align-items: center;
+}
+
+#logo {
+    width: 130px;
+}
+
+.listItem {
+    /* to aline all items in same line */
+    display: inline;
+    font-weight: bold;
+    padding: 5px 20px;
+    list-style: none;
+    font-size: medium;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* pseudo class- used to definr a special state of an element -eg: hover , active, visited etc.
+
+syntax: element:pseudo{
+    property:value
+} */
+
+li a:hover {
+    color: violet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* descendent selector */
+li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#title h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#title p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#title {
+    margin-top: 13%;
+    margin-left: 8%;
+}
+
+#title button {
+    background-color: black;
+    border-radius: 5px;
+    padding: 15 px;
+}
+
+#title a {
+    text-decoration: none;
+    color: white;
+}
+
+#images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+    bottom: 0px;
+    right: 30px;
+
+}
+
+.samegroup {
+    position: absolute;
+    height: 100%;
+    bottom: 0px;
+    left: 50%;
+    /* used to change the position in 2D,3D motion when hover */
+    transform: translateX(-50%);
+    transition: bottom 1s, left 2s;
+}
+
+#images:hover #shape {
+    bottom: 70px;
+}
+
+#images:hover #workingwomen {
+    left: 40%;
+}
+
+#about {
+    justify-content: center;
+    align-items: center;
+    margin: 14% 8% 0 8%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    font-size: 30px;
+}
+
+.heading p {
+    color: rgb(61, 247, 33);
+    font-size: 20px;
+}
+
+#content_image {
+    width: 60%;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* related to html element font size , default rem value-16px */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+#content_details {
+    text-align: justify;
+    font-weight: bold;
+
+
+}
+
+#informations {
+    margin-top: 2rem;
+}
+
+.info {
+    margin-top: 1rem;
+}
+
+.info span {
+    margin-left: 1rem;
+}
+
+#myskills {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#skills_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+#skills_image img {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.perc {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+}
+
+.perc span {
+    font-weight: 800;
+    font-size: 20px;
+
+}
+
+.cbar {
+    width: 90%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#html_bar {
+    width: 85%;
+    background-color: orange;
+}
+
+#css_bar {
+    width: 78%;
+    background-color: orange;
+}
+
+#react_bar {
+    width: 75%;
+    background-color: orange;
+}
+
+#js_bar {
+    width: 79%;
+    background-color: orange;
+}
+
+#icons {
+    align-items: center;
+}
+
+.icon_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-top: 20px;
+}
+
+.icon, .uparrow {
+    height: 50px;
+    width: 50px;
+    margin: 0px 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.icon i {
+    color: black;
+    
+
+}
+
+.icon:hover {
+    background-image: linear-gradient(to bottom right, yellow, orange);
+}
+
+.icon:hover i {
+    color: white;
+    animation: shake 0.5s;
+}
+
+@keyframes shake{
+    10% {
+        transform: rotate(30deg);
+    }
+
+    20% {
+        transform: translate(-300px)
+    }
+
+    30% {
+        transform: rotate(-30edeg);
+    }
+
+    40% {
+        transform: rotate(60deg);
+
+    }
+}
+footer{
+    padding: 3rem 0px;
+}
+footer p{
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+}
+.uparrow{
+    background-image: linear-gradient(to bottom right, yellow, orange); 
+    float: right;  
+    margin: 10px 50px 50px 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
